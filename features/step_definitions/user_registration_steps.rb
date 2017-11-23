@@ -1,13 +1,13 @@
-Given(/^I am on the registration page$/) do
+Given(/^I visit the signup page$/) do
   visit '/signup'
 end
 
-Given(/^I enter "([^"]*)" with "([^"]*)"$/) do |label, value|
-  fill_in label, with: value
+Given(/^I enter "([^"]*)" with "([^"]*)"$/) do |field_name, value|
+  fill_in field_name, with: value
 end
 
-Given(/^I click "([^"]*)"$/) do |component|
-  click_link_or_button component
+Given(/^I click "([^"]*)"$/) do |element|
+  click_link_or_button element
 end
 
 Then(/^I should be on the landing$/) do

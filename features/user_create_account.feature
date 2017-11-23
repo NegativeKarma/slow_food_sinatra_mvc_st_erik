@@ -4,8 +4,8 @@ Feature: User create account
   I would like to be able to create an account
 
   Scenario: When user enter all necessary data an account is created
-    Given I am on the signup page
-    And I enter "Username" with "Geronimo"
+    Given I visit the signup page
+    When I enter "Username" with "Geronimo"
     And I enter "Password" with "qweqwe"
     And I enter "Password confirmation" with "qweqwe"
     And I click "Register"
