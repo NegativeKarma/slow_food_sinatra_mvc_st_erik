@@ -5,7 +5,7 @@ Feature: User create account
 
   Scenario: When user enter all necessary data an account is created
     Given I visit the signup page
-    When I enter "Username" with "Geronimo"
+    When I enter "Name" with "Geronimo"
     And I enter "Password" with "qweqwe"
     And I enter "Password confirmation" with "qweqwe"
     And I click "Register"
