@@ -22,8 +22,7 @@ class SlowFoodApp
     if user.save
       redirect '/', notice: "Thank you for signing up #{user.name}"
     else
-      flash[:error] = user.errors.full_messages.join(",")
-      redirect '/signup'
+      redirect '/signup', notice: "You need to add a name"      
     end
 
   end
