@@ -20,3 +20,19 @@ Feature: User create account
     And I click "Register"
     Then I should be on the registration page
     And I should see "You need to add a name"
+
+  Scenario: Error message is displayed if user fails to submit password
+    Given I visit the signup page
+    When I enter "Name" with "Ciro"
+    And I click "Register"
+    Then I should be on the registration page
+    And I should see "You need to add a valid password"
+
+    Scenario: Error message is displayed if user fails to submit password
+      Given I visit the signup page
+      When I enter "Name" with "Ciro"
+      And I enter "Password" with "qweqwe"
+      And I enter "Password confirmation" with "tzetchuan"
+      And I click "Register"
+      Then I should be on the registration page
+      And I should see "You need to confirm your password"
