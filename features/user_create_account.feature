@@ -10,4 +10,4 @@ Feature: User create account
     And I enter "Password confirmation" with "qweqwe"
     And I click "Register"
     Then I should be on the landing
-    And I should see "thank you for your registration Geronimo"
+    And I should see "Thank you for signing up Geronimo"
