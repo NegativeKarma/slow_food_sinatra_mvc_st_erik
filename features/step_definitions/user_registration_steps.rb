@@ -17,3 +17,7 @@ end
 Then(/^I should see "([^"]*)"$/) do |text|
   expect(page).to have_content text
 end
+
+Then(/^I should be on the registration page$/) do
+  expect(current_path).to eq '/signup'
+end
