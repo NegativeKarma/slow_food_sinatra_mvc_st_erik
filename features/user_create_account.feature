@@ -20,7 +20,6 @@ Feature: User create account
     And I click "Register"
     Then I should be on the registration page
     And I should see "You need to add a name"
-    Then show me the page
 
   Scenario: Error message is displayed if user fails to submit password
     Given I visit the signup page
