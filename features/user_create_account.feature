@@ -9,7 +9,8 @@ Feature: User create account
     And I enter "Password" with "qweqwe"
     And I enter "Password confirmation" with "qweqwe"
     And I click "Register"
-    Then I should be on the landing
+    Then I would like user "Geronimo" to be saved in the database
+    And I should be on the landing
     And I should see "Thank you for signing up Geronimo"
 
   Scenario: When a user fails to submit a username an error message is displayed
