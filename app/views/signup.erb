@@ -1,4 +1,4 @@
-<form action="/register" method="post" class="callout text-center">
+<form action="/register" method="post" class="callout text-center" style="margin: 5% 20% 5% 20%">
   <div class="floated-label-wrapper">
     <label for="name">Name</label>
     <input type="text" id="name" name="user[name]" placeholder="Full name"\>
@@ -11,8 +11,9 @@
     <label for="password">Password</label>
     <input type="text" id="password" name="user[password]" placeholder="Password"\>
   </div>
+  <div class="floated-label-wrapper">
     <label for="password_confirmation">Password confirmation</label>
-    <input type="text" id="password_confirmation" name="user[password_confirmation]" placeholder="Password Confirmation"\>
-
+    <input type="text" id="password_confirmation" name="user[password_confirmation]" placeholder="Password confirmation"\>
+  </div>
     <input class="button expanded" type="submit" value="Register">
 </form>
