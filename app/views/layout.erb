@@ -12,16 +12,31 @@
 <body>
 <div id="content">
   <header>
-    <a href="/"><img src="/img/zenchinese.png" class="logo"></a>
-    <a href="/signup" class="secondary hallow button">Register</a>
-    <div id="login-toolbar">
-      <% if current_user %>
-        <a href="/logout" class="secondary hallow button">Logout</a>
-      <% else %>
-        <a href="/login" class="secondary hallow button">Login</a>
-      <% end %>
+    <!--<a href="/"><img src="/img/zenchinese.png" class="logo"></a>-->
+    <div class="top-bar-container">
+      <div class="top-bar-left">
+        <ul class="menu menu-hover-lines">
+          <li class="active"><a href="/welcome">Home</a></li>
+          <li><a href="/aboutus">About Us</a></li>
+          <li><a href="/location">Location</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><a href="/signup" class="secondary hallow button">Register</a></li>
+          <li>
+            <div id="login-toolbar">
+              <% if current_user %>
+                  <a href="/logout" class="secondary hallow button">Logout</a>
+              <% else %>
+                  <a href="/login" class="secondary hallow button">Login</a>
+              <% end %>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-
   </header>
   <link rel="signup" href="views/signup.erb"/>
 
