@@ -1,5 +1,18 @@
 /*General*/
 
+header {
+    background: url(../img/restaurant.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 700px;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    background-position: bottom center;
+}
+
 body {
     font-family: Quicksand;
 }
@@ -30,35 +43,6 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle;
 }
 
-
-/*General*/
-
-.intro {
-    background: url(../img/fourway.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 700px;
-    color: #fff;
-    padding: 30px;
-    text-align: center;
-    background-position: bottom center;
-}
-
-.intro a {
-    color: white;
-    font-size: 1.5rem;
-}
-
-.intro .button {
-    font-size: 1rem;
-}
-
-.button.hollow.secondary {
-    border: 1px solid #ffffff;
-    color: #ffffff;
-}
 
 /* About */
 .about {
