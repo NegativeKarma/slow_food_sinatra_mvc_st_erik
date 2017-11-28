@@ -18,6 +18,7 @@ gem 'bcrypt'
 gem 'rake'
 
 gem 'shotgun'
+gem 'faker'
 
 group :test do
   gem 'capybara'
@@ -31,6 +32,5 @@ end
 
 group :test, :development do
   gem 'factory_bot'
-  gem 'faker'
   gem 'pry-byebug'
 end
