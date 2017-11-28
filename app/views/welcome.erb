@@ -3,26 +3,36 @@ Welcome to my site!
 <h2> Starters </h2>
 <% @products.each do |product| %>
   <% if product.category == 'Starter' %>
-    <h1>
-      <%= "#{product.name} - #{product.price} kr" %>
-    </h1>
-
-    <p>
-      <%= product.description %>
-    </p>
+    <div id='product-<%= product.id %>'>
+      <h1>
+        <%= "#{product.name} - #{product.price} kr" %>
+      </h1>
+      <p>
+        <%= product.description %>
+      </p>
+      <form action="/order_create" method="post">
+        <input type="hidden" name="product-id" value="<%= product.id %>"/>
+        <input type="submit" value="Order"/>
+      </form>
+    </div>
   <% end %>
 <% end %>
 
 <h2> Main </h2>
 <% @products.each do |product| %>
   <% if product.category == 'Main' %>
-    <h1>
-      <%= "#{product.name} - #{product.price} kr" %>
-    </h1>
-
-    <p>
-      <%= product.description %>
-    </p>
+    <div id='product-<%= product.id %>'>
+      <h1>
+        <%= "#{product.name} - #{product.price} kr" %>
+      </h1>
+      <p>
+        <%= product.description %>
+      </p>
+      <form action="/order_create" method="post">
+        <input type="hidden" name="product-id" value="<%= product.id %>"/>
+        <input type="submit" value="Order"/>
+      </form>
+    </div>
   <% end %>
 <% end %>
 
@@ -30,12 +40,17 @@ Welcome to my site!
 <h2> Dessert </h2>
 <% @products.each do |product| %>
   <% if product.category == 'Dessert' %>
-    <h1>
-      <%= "#{product.name} - #{product.price} kr" %>
-    </h1>
-
-    <p>
-      <%= product.description %>
-    </p>
+    <div id='product-<%= product.id %>'>
+      <h1>
+        <%= "#{product.name} - #{product.price} kr" %>
+      </h1>
+      <p>
+        <%= product.description %>
+      </p>
+      <form action="/order_create" method="post">
+        <input type="hidden" name="product-id" value="<%=product.id%>"/>
+        <input type="submit" value="Order"/>
+      </form>
+    </div>
   <% end %>
 <% end %>
