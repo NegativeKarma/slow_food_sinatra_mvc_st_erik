@@ -1,5 +1,5 @@
 require 'faker'
-categories = ['starter','main course', 'dessert']
+categories = ['Starter','Main', 'Dessert']
 10.times do
   Product.create(
       name: Faker::Food.dish,
