@@ -5,17 +5,14 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 require 'rubygems'
 require 'uri'
 require 'pathname'
-
 require 'pg'
 require 'active_record'
 require 'logger'
-
 require 'sinatra'
 require 'rack-flash'
 require 'sinatra/redirect_with_flash'
 require "sinatra/reloader" if development?
 require 'pry' unless production?
-
 require 'erb'
 
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
