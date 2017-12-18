@@ -11,7 +11,7 @@
       </p>
       <form action="/order_create" method="post">
         <input type="hidden" name="product-id" value="<%= product.id %>"/>
-        <input type="submit" value="Order"/>
+        <input type="submit" value="Order" class="hollow button">
       </form>
     </div>
   <% end %>
@@ -27,14 +27,13 @@
       <p>
         <%= product.description %>
       </p>
-      <form action="/order_create" method="post">
+      <form action="/order_create" method="post" style="position: center">
         <input type="hidden" name="product-id" value="<%= product.id %>"/>
-        <input type="submit" value="Order"/>
+        <input type="submit" value="Order" class="hollow button">
       </form>
     </div>
   <% end %>
 <% end %>
-
 
 <h2> Dessert </h2>
 <% @products.each do |product| %>
@@ -48,7 +47,7 @@
       </p>
       <form action="/order_create" method="post">
         <input type="hidden" name="product-id" value="<%=product.id%>"/>
-        <input type="submit" value="Order"/>
+        <input type="submit" value="Order" class="hollow button">
       </form>
     </div>
   <% end %>

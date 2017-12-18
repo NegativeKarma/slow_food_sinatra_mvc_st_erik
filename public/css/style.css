@@ -267,5 +267,6 @@ p {
     }
 }
 
-
-/*Footer */
+form {
+  text-align: center;
+}
