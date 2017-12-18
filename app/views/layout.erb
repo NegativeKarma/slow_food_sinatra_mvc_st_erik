@@ -21,21 +21,23 @@
       </div>
       <div class="top-bar-right">
         <ul class="menu">
-          <li><a href="/signup" class="secondary hallow button">Register</a></li>
+          <li><a href="/signup" class="hallow button">Sign up</a></li>
           <li>
             <div id="login-toolbar">
               <% if current_user %>
-                  <a href="/logout" class="secondary hallow button">Logout</a>
+                  <a href="/" class="hallow button">Logout</a>
               <% else %>
-                  <a href="/login" class="secondary hallow button">Login</a>
+                  <a href="/login" class="hallow button">Login</a>
               <% end %>
             </div>
+          <li>
+            <p>Logged in as: <%= current_user.name %> </p>
+          </li>
           </li>
         </ul>
       </div>
     </div>
   </header>
-  <link rel="signup" href="views/signup.erb"/>
 
   <% flash.keys.each do |type| %>
       <div>
@@ -49,7 +51,7 @@
     <div class="row medium-unstack">
       <div class="medium-4 columns">
         <h4 class="marketing-site-footer-name">St:Eriks Restaurant</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dolorem accusantium architecto id quidem, itaque nesciunt quam ducimus atque.</p>
+        <p>Good food tastes good.</p>
         <ul class="menu marketing-site-footer-menu-social simple">
           <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
           <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
@@ -68,14 +70,14 @@
         </div>
         <div class="marketing-site-footer-block">
           <i class="fa fa-envelope-o" aria-hidden="true"></i>
-          <p>steriksrestaurant@fakeemail.com</p>
+          <p>steriksrestaurant@mail.com</p>
         </div>
       </div>
     </div>
     <div class="marketing-site-footer-bottom">
       <div class="row large-unstack align-middle">
         <div class="column">
-          <p>&copy; 2017 No rights reserved</p>
+          <p>&copy; 2017 St Erik's team</p>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 require 'faker'
-categories = ['Starter','Main', 'Dessert']
+categories = ['Starter', 'Main', 'Dessert']
 10.times do
   Product.create(
       name: Faker::Food.dish,
@@ -7,4 +7,5 @@ categories = ['Starter','Main', 'Dessert']
       price: rand(10..100),
       description: Faker::Lorem.paragraph
   )
+
 end
