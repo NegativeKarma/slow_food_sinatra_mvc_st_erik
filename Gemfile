@@ -2,21 +2,15 @@ source 'https://rubygems.org'
 
 ruby '2.4.1'
 
-# PostgreSQL driver
 gem 'pg'
-
-# Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'rack-flash3'
 gem 'sinatra-redirect-with-flash'
-
 gem 'activerecord'
 gem 'activesupport'
 gem 'bcrypt'
-
 gem 'rake'
-
 gem 'shotgun'
 gem 'faker'
 
