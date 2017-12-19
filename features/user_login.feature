@@ -15,7 +15,6 @@ Feature: Login Page
     And I click "Login"
     Then I should be on the landing
     And I should see "Welcome Scott! You are logged in"
-    And I should see "Logged in as: Scott"
 
   Scenario: Visitor writes incorrect information and presses logins
     Given I visit the login page
@@ -24,7 +23,7 @@ Feature: Login Page
     And I click "Login"
     Then I should see "Incorrect username or password"
 
-  Scenario: Visitor is finished and presses logout
+  Scenario: Visitor wants to logout
     Given I visit the login page
     When I enter "Username" with "Scott"
     And I enter "Password" with "password"
