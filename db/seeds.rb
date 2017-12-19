@@ -1,11 +1,28 @@
 require 'faker'
-categories = ['Starter', 'Main', 'Dessert']
-10.times do
+category = ['Starter']
+2.times do
   Product.create(
       name: Faker::Food.dish,
-      category: categories.sample,
+      category: category.sample,
       price: rand(10..100),
       description: Faker::Lorem.paragraph
   )
-
+end
+category = ['Main']
+2.times do
+  Product.create(
+      name: Faker::Food.dish,
+      category: category.sample,
+      price: rand(10..100),
+      description: Faker::Lorem.paragraph
+  )
+end
+category = ['Dessert']
+2.times do
+  Product.create(
+      name: Faker::Food.dish,
+      category: category.sample,
+      price: rand(10..100),
+      description: Faker::Lorem.paragraph
+  )
 end

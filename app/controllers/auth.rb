@@ -5,25 +5,25 @@ class SlowFoodApp
   end
 
   get '/login' do
-    erb :login
-  end
-
-  get '/logout' do
-    session[:user_id] = nil
-    flash[:logout] = 'You have been logged out'
-    redirect '/'
-  end
-
-  post '/login' do
-    user = User.find_by(name: params['user']['name'])
-    if user.authenticate(params['user']['password'])
-      session[:user_id] = user.id
-      flash[:login] = "Welcome #{current_user.name}! You are logged in"
-      redirect '/'
-    else
-      flash[:login_error] = 'Incorrect username or password'
-      redirect '/login'
-    end
+  #   erb :login
+  # end
+  #
+  # get '/logout' do
+  #   session[:user_id] = nil
+  #   flash[:logout] = 'You have been logged out'
+  #   redirect '/'
+  # end
+  #
+  # post '/login' do
+  #   user = User.find_by(name: params['user']['name'])
+  #   if user.authenticate(params['user']['password'])
+  #     session[:user_id] = user.id
+  #     flash[:login] = "Welcome #{current_user.name}! You are logged in"
+  #     redirect '/'
+  #   else
+  #     flash[:login_error] = 'Incorrect username or password'
+  #     redirect '/login'
+  #   end
   end
 
   get '/signup' do
