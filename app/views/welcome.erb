@@ -1,5 +1,4 @@
 <h2> Starters </h2>
-
 <% @products.each do |product| %>
   <% if product.category == 'Starter' %>
     <div id='product-<%= product.id %>'>
@@ -10,8 +9,8 @@
         <%= product.description %>
       </p>
       <form action="/order_create" method="post">
-        <input type="hidden" name="product-id" value="<%= product.id %>"/>
-        <input type="submit" value="Order"/>
+        <input type="hidden" name="product-id" value="<%= product.id %>">
+        <input type="submit" value="Order" class="hollow button">
       </form>
     </div>
   <% end %>
@@ -28,13 +27,12 @@
         <%= product.description %>
       </p>
       <form action="/order_create" method="post">
-        <input type="hidden" name="product-id" value="<%= product.id %>"/>
-        <input type="submit" value="Order"/>
+        <input type="hidden" name="product-id" value="<%= product.id %>">
+        <input type="submit" value="Order" class="hollow button">
       </form>
     </div>
   <% end %>
 <% end %>
-
 
 <h2> Dessert </h2>
 <% @products.each do |product| %>
@@ -47,8 +45,8 @@
         <%= product.description %>
       </p>
       <form action="/order_create" method="post">
-        <input type="hidden" name="product-id" value="<%=product.id%>"/>
-        <input type="submit" value="Order"/>
+        <input type="hidden" name="product-id" value="<%=product.id%>">
+        <input type="submit" value="Order"  class="hollow button">
       </form>
     </div>
   <% end %>
