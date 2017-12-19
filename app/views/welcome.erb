@@ -1,6 +1,5 @@
-Welcome to my site!
-
 <h2> Starters </h2>
+
 <% @products.each do |product| %>
   <% if product.category == 'Starter' %>
     <div id='product-<%= product.id %>'>

@@ -1,35 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
-  <!--
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
-  <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
-  <link rel="stylesheet" href="/css/application.css">
-  <!-- Load Vollkorn font -->
-  <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/application.js"></script>
-
-  <title></title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slow Food Sinatra</title>
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="foundation-icons/foundation-icons.css">
+  <link rel="stylesheet" href="css/foundation.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+
+  <%#= erb :header %>
+  <%#= erb :footer %>
+  
 <div id="content">
   <header>
-    <a href="/"><img src="/img/zenchinese.png" class="logo"></a>
-    <div id="login-toolbar">
-      <% if current_user %>
-        <a href="/logout">Logout</a>
-      <% else %>
-        <a href="/login">Login</a>
-      <% end %>
+    <div class="top-bar-container">
+      <div class="top-bar-left">
+        <ul class="menu menu-hover-lines">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/aboutus">About Us</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><a href="/signup" class="secondary hallow button">Register</a></li>
+          <li>
+            <div id="login-toolbar">
+              <% if current_user %>
+                  <a href="/logout" class="secondary hallow button">Logout</a>
+              <% else %>
+                  <a href="/login" class="secondary hallow button">Login</a>
+              <% end %>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </header>
+  <link rel="signup" href="views/signup.erb"/>
 
   <% flash.keys.each do |type| %>
       <div>
@@ -38,6 +49,72 @@
   <% end %>
 
   <%= yield %>
+
+  <footer class="marketing-site-footer">
+    <div class="row medium-unstack">
+      <div class="medium-4 columns">
+        <h4 class="marketing-site-footer-name">St:Eriks Restaurant</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dolorem accusantium architecto id quidem, itaque nesciunt quam ducimus atque.</p>
+        <ul class="menu marketing-site-footer-menu-social simple">
+          <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+      <div class="medium-4 columns">
+        <h4 class="marketing-site-footer-title">Contact Info</h4>
+        <div class="marketing-site-footer-block">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <p>Open Lab, Valhallavägen<br>Stockholm, Sweden</p>
+        </div>
+        <div class="marketing-site-footer-block">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <p>1 (072) 555-5555</p>
+        </div>
+        <div class="marketing-site-footer-block">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          <p>steriksrestaurant@fakeemail.com</p>
+        </div>
+      </div>
+      <!--<div class="medium-4 columns">
+        <h4 class="marketing-site-footer-title">Instagram</h4>
+        <div class="row small-up-3">
+          <div class="column column-block">
+            <img src="https://placehold.it/75" alt="" />
+          </div>
+          <div class="column column-block">
+            <img src="https://placehold.it/75" alt="" />
+          </div>
+          <div class="column column-block">
+            <img src="https://placehold.it/75" alt="" />
+          </div>
+          <div class="column column-block">
+            <img src="https://placehold.it/75" alt="" />
+          </div>
+          <div class="column column-block">
+            <img src="https://placehold.it/75" alt="" />
+          </div>
+          <div class="column column-block">
+            <img src="https://placehold.it/75" alt="" />
+          </div>
+        </div>
+      </div>-->
+    </div>
+    <div class="marketing-site-footer-bottom">
+      <div class="row large-unstack align-middle">
+        <div class="column">
+          <p>&copy; 2017 No rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
 </div>
+<script src="js/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+</script>
 </body>
 </html>

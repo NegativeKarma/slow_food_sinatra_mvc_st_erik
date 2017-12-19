@@ -1,0 +1,271 @@
+/*General*/
+
+header {
+    background: url(../img/restaurant.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 700px;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    background-position: bottom center;
+}
+
+.top-bar-left, .top-bar-right {
+    background-color: transparent;
+}
+
+.menu-hover-lines {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.35s ease;
+}
+
+.menu-hover-lines li a {
+    padding: 0.75rem 0;
+    color: white;
+    position: relative;
+    margin-left: 1rem;
+}
+
+.menu-hover-lines li:first-child a {
+    margin-left: 0;
+}
+
+.menu-hover-lines li.active > a {
+    background-color: transparent;
+}
+
+.menu-hover-lines a:before,
+.menu-hover-lines a::after {
+    height: 3px;
+    position: absolute;
+    content: '';
+    transition: all 0.35s ease;
+    background-color: white;
+    width: 0;
+}
+
+.menu-hover-lines a::before {
+    top: 0;
+    left: 0;
+}
+
+.menu-hover-lines a::after {
+    bottom: 0;
+    right: 0;
+}
+
+.menu-hover-lines a:hover,
+.menu-hover-lines li.active > a {
+    color: white;
+    transition: all 0.35s ease;
+}
+
+.menu-hover-lines a:hover::before,
+.menu-hover-lines .active a::before,
+.menu-hover-lines a:hover::after,
+.menu-hover-lines .active a::after {
+    width: 100%;
+}
+
+body {
+    font-family: Quicksand;
+}
+
+.button.hollow.secondary:hover, .button.hollow.secondary:focus {
+    border-color: #0a0a0a;
+    color: #8aa0ae;
+}
+
+.button:hover, .button:focus {
+   border-color: #0a0a0a;
+    color: white;
+    background-color:#8aa0ae;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Quicksand;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.display-table {
+    display: table;
+}
+
+.va-align {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* About */
+.about {
+    background-color: #fff;
+    text-align: center;
+    margin: 40px;
+}
+
+/*checkout*/
+
+.checkout {
+    background-color: #8aa0ae;
+    color: #fff;
+    min-height: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+/*flash*/
+
+.flash {
+    background-color: #8aa0ae;
+    color: #fff;
+    min-height: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* Contact */
+
+.contact {
+    background-image: url('../img/fourway.jpg');
+    background-position: center center;
+    min-height: 200px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.floated-label-wrapper {
+  position: relative;
+}
+
+.floated-label-wrapper label {
+  background: #fefefe;
+  color: #1779ba;
+  font-size: 0.75rem;
+  font-weight: 600;
+  left: 0.75rem;
+  opacity: 0;
+  padding: 0 0.25rem;
+  position: absolute;
+  top: 2rem;
+  transition: all 0.15s ease-in;
+  z-index: -1;
+}
+
+.floated-label-wrapper label input[type=text],
+.floated-label-wrapper label input[type=email],
+.floated-label-wrapper label input[type=password] {
+  border-radius: 4px;
+  font-size: 1.75em;
+  padding: 0.5em;
+}
+
+.floated-label-wrapper label.show {
+  opacity: 1;
+  top: -0.85rem;
+  z-index: 1;
+  transition: all 0.15s ease-in;
+}
+
+.marketing-site-footer {
+    background: #2c3840;
+    color: #8aa0ae;
+    padding: 2rem 0 0;
+}
+
+.marketing-site-footer .marketing-site-footer-menu-social a {
+    color: #fefefe;
+}
+
+.marketing-site-footer .column-block {
+    margin-bottom: 30px;
+}
+
+.marketing-site-footer > .row {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .marketing-site-footer .columns {
+        margin-bottom: 2rem;
+    }
+}
+
+.marketing-site-footer-name {
+    color: #fefefe;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.marketing-site-footer-title {
+    color: #fefefe;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.marketing-site-footer-block {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.marketing-site-footer-block .fa {
+    font-size: 2rem;
+    color: #020304;
+}
+
+.marketing-site-footer-block p {
+    margin-left: 1rem;
+    line-height: 1.125rem;
+}
+
+.marketing-site-footer-bottom {
+    background: #020304;
+    padding: 1rem 0;
+}
+
+.marketing-site-footer-bottom p,
+.marketing-site-footer-bottom .menu {
+    margin-bottom: 0;
+}
+
+.marketing-site-footer-bottom .marketing-site-footer-bottom-links {
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.marketing-site-footer-bottom .marketing-site-footer-bottom-links a {
+    color: #8aa0ae;
+}
+
+@media screen and (max-width: 63.9375em) {
+    .marketing-site-footer-bottom .marketing-site-footer-bottom-links {
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 63.9375em) {
+    .marketing-site-footer-bottom {
+        text-align: center;
+    }
+}
+
+
+/*Footer */
