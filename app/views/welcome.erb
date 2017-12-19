@@ -1,20 +1,3 @@
-<form class="callout text-center">
-  <h2>Become A Member</h2>
-  <div class="floated-label-wrapper">
-    <label for="full-name">Full name</label>
-    <input type="text" id="full-name" name="full name input" placeholder="Full name">
-  </div>
-  <div class="floated-label-wrapper">
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email input" placeholder="Email">
-  </div>
-  <div class="floated-label-wrapper">
-    <label for="pass">Password</label>
-    <input type="password" id="pass" name="password input" placeholder="Password">
-  </div>
-  <input class="button expanded" type="submit" value="Sign up">
-</form>
-
 <h2> Starters </h2>
 <% @products.each do |product| %>
   <% if product.category == 'Starter' %>
@@ -26,8 +9,8 @@
         <%= product.description %>
       </p>
       <form action="/order_create" method="post">
-        <input type="hidden" name="product-id" value="<%= product.id %>"/>
-        <input type="submit" value="Order"/>
+        <input type="hidden" name="product-id" value="<%= product.id %>">
+        <input type="submit" value="Order" class="hollow button">
       </form>
     </div>
   <% end %>
@@ -44,13 +27,12 @@
         <%= product.description %>
       </p>
       <form action="/order_create" method="post">
-        <input type="hidden" name="product-id" value="<%= product.id %>"/>
-        <input type="submit" value="Order"/>
+        <input type="hidden" name="product-id" value="<%= product.id %>">
+        <input type="submit" value="Order" class="hollow button">
       </form>
     </div>
   <% end %>
 <% end %>
-
 
 <h2> Dessert </h2>
 <% @products.each do |product| %>
@@ -63,8 +45,8 @@
         <%= product.description %>
       </p>
       <form action="/order_create" method="post">
-        <input type="hidden" name="product-id" value="<%=product.id%>"/>
-        <input type="submit" value="Order"/>
+        <input type="hidden" name="product-id" value="<%=product.id%>">
+        <input type="submit" value="Order"  class="hollow button">
       </form>
     </div>
   <% end %>

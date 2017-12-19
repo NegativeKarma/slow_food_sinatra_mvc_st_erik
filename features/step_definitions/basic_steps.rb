@@ -12,10 +12,6 @@ Then(/^I should see "([^"]*)" users$/) do |count|
   expect(page).to have_css 'div .user', count: count.to_i
 end
 
-Then(/^show me the page$/) do
-  save_and_open_page
-end
-
 Then(/^I would like to see "([^"]*)"$/) do |content|
   expect(page).to have_content content
 end

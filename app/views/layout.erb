@@ -11,34 +11,31 @@
 </head>
 <body>
 
-  <form class="callout text-center">
-    <h2>Become A Member</h2>
-    <div class="floated-label-wrapper">
-      <label for="full-name">Full name</label>
-      <input type="text" id="full-name" name="full name input" placeholder="Full name">
-    </div>
-    <div class="floated-label-wrapper">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email input" placeholder="Email">
-    </div>
-    <div class="floated-label-wrapper">
-      <label for="pass">Password</label>
-      <input type="password" id="pass" name="password input" placeholder="Password">
-    </div>
-    <input class="button expanded" type="submit" value="Sign up">
-  </form>
-
 <div id="content">
   <header>
-    <a href="/"><img src="/img/zenchinese.png" class="logo"></a>
-    <div id="login-toolbar">
-      <% if current_user %>
-        <a href="/logout">Logout</a>
-      <% else %>
-        <a href="/login">Login</a>
-      <% end %>
+    <div class="top-bar-container">
+      <div class="top-bar-left">
+        <ul class="menu menu-hover-lines">
+          <li class="active"><a href="/">Home</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><a href="/signup" class="hallow button">Sign up</a></li>
+          <li>
+            <div id="login-toolbar">
+              <% if current_user %>
+                  <a href="/logout" class="hallow button">Logout</a>
+              <% else %>
+                  <a href="/login" class="hallow button">Login</a>
+              <% end %>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
+  <link rel="signup" href="views/signup.erb"/>
 
   <% flash.keys.each do |type| %>
       <div>
@@ -47,6 +44,43 @@
   <% end %>
 
   <%= yield %>
+
+  <footer class="marketing-site-footer">
+    <div class="row medium-unstack">
+      <div class="medium-4 columns">
+        <h4 class="marketing-site-footer-name">St:Eriks Restaurant</h4>
+        <p>Good food tastes good.</p>
+        <ul class="menu marketing-site-footer-menu-social simple">
+          <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+      <div class="medium-4 columns">
+        <h4 class="marketing-site-footer-title">Contact Info</h4>
+        <div class="marketing-site-footer-block">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <p>Open Lab, Valhallavägen<br>Stockholm, Sweden</p>
+        </div>
+        <div class="marketing-site-footer-block">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <p>1 (072) 555-5555</p>
+        </div>
+        <div class="marketing-site-footer-block">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          <p>steriksrestaurant@mail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="marketing-site-footer-bottom">
+      <div class="row large-unstack align-middle">
+        <div class="column">
+          <p>&copy; 2017 St Erik's team</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </div>
 <script src="js/jquery.js"></script>
 <script src="js/foundation.min.js"></script>
