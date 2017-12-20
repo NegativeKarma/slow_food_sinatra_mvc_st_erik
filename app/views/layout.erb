@@ -37,9 +37,13 @@
   </header>
 
   <% flash.keys.each do |type| %>
-      <div>
-        <%= flash[type] %>
+    <div class="flash">
+      <div class="row">
+        <div class="large-12 columns">
+          <%= flash[type] %>
+        </div>
       </div>
+    </div>
   <% end %>
 
   <%= yield %>
