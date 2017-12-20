@@ -270,3 +270,9 @@ p {
 form {
   text-align: center;
 }
+
+.footer {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+}
